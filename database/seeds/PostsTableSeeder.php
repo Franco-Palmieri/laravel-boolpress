@@ -16,11 +16,11 @@ class PostsTableSeeder extends Seeder
         for ($i = 0; $i < 50; $i++){
             
             $postObject = new Post();
-            $postObject->name = $faker->sentence(5);
+            $postObject->name = $faker->word();
             $postObject->body = $faker->paragraph();
             $postObject->image = $faker->imageUrl(640, 480, 'post', true);
             $postObject->date = $faker->date();
-
+            $postObject->save();
         }
     }
 }
