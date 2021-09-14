@@ -17,7 +17,9 @@ class PostController extends Controller
         if(!Auth::check()){
             return redirect()->route('login');
         }
-        return view('index');
+
+        $posts = Post::all(); 
+        return view('posts.index', compact('posts'));
     }
 
     /**

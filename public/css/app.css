@@ -10948,12 +10948,7 @@ a.text-dark:focus {
   margin: 0;
 }
 
-.container .row .post-container {
-  height: 300px;
-}
-
-.container .row .post-container .row .image-box img {
-  width: 100%;
-  height: 100%;
+.container .row .table tbody tr td img {
+  width: 100px;
 }
 
