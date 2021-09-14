@@ -11,6 +11,7 @@
                     <th scope="col">Body</th>
                     <th scope="col">Date</th>
                     <th scope="col">Image</th>
+                    <th scope="col">View</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@
                     <td>{{$post->body}}</td>
                     <td>{{$post->date}}</td>
                     <td><img src="{{$post->image}}" alt=""></td>
+                    <td><a href="{{route('posts.show', ['post' => $post->id])}}"><i class="bi bi-arrow-right-square-fill"></i></a></td>
                 </tr>
                 @endforeach
             </tbody>

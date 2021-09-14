@@ -20,7 +20,6 @@
                     <td>{{$post->date}}</td>
                     <td><img src="{{$post->image}}" alt=""></td>
                 </tr>
-
             </tbody>
         </table>
     </div>
