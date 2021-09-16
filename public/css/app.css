@@ -10944,12 +10944,13 @@ a.text-dark:focus {
 
 .container .row .card-blog {
   padding: 10px;
-  height: 500px;
 }
 
 .container .row .card-blog .card-content {
   border: 1px solid lightgray;
-  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  height: 460px;
 }
 
 .container .row .card-blog .card-content img {

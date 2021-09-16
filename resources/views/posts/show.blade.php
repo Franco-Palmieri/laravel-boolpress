@@ -1,8 +1,10 @@
 @extends('layouts.app')
+
+
 @section('content')
+@include('layouts.nav')
 <div class="container">
     <div class="row">
-@include('layouts.nav')
     <table class="table">
             <thead>
                 <tr>

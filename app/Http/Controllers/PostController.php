@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
+
 
 class PostController extends Controller
 {
@@ -40,7 +42,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        /* 
+            Prendo i parametri della request inviata dal create
+            creo un nuovo oggetto dal model Post
+            imposto i parametri con i dati della request
+        */
+        $data = $request->all(); //ritornano tutti i parametri come un array
+
+        $data = new Post();
+        $post->name = $data['name'];
+        $post->body = $data['body'];
+        $post->image = $data['image'];
+        $post->save();
+
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**

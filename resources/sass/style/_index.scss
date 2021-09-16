@@ -2,10 +2,11 @@
     .row{
       .card-blog{
           padding: 10px;
-          height: 500px;
           .card-content{
               border: 1px solid lightgray;
-              height: 100%;
+              padding: 5px;
+              border-radius: 5px;
+              height: 460px;
               img{
                   width: 100%;
               }

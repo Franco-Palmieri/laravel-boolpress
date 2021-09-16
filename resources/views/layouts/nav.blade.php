@@ -4,10 +4,10 @@
         <div class="row">
             <div class="nav-content col-12">
                 <div class="list-nav"> 
-                    <a href="{{ url('/') }}">HOME</a> 
+                    <a href="{{route('posts.index')}}">HOME</a> 
                 </div>
                 <div class="list-nav"> 
-                    <a href="#">ADD POST</a> 
+                    <a href="{{route('posts.create')}}">ADD POST</a> 
                 </div>
                 <div class="list-nav"> 
                     <a href="#">TAGS</a> 
