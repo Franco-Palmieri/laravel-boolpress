@@ -5,13 +5,13 @@
 <div class="container">
     <div class="row">
         @foreach($posts as $post)
-            <div class="card-blog col-3">
-                <div class="card-content">
-                    <a href="{{route('posts.show',['post' => $post->id])}}">
-                        <img src="{{$post->image}}" alt="">
-                    </a>
-                    <div class="name"><h3>{{$post->name}}</h3></div>
-                    <p>{{$post->body}}</p>
+            <div class="blog-container card-deck col-6 col-md-3">
+                <div class="card">
+                    <a href="{{route('posts.show', $post->id)}}"><img class="card-img-top" src="{{$post->image}}" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{$post->name}}</h5>
+                        <p class="card-text">{{$post->body}}</p>
+                    </div>
                 </div>
             </div>
         @endforeach

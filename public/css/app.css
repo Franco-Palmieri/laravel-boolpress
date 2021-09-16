@@ -10942,18 +10942,19 @@ a.text-dark:focus {
   }
 }
 
-.container .row .card-blog {
+.container .row {
+  justify-content: center;
+}
+
+.container .row .blog-container {
   padding: 10px;
 }
 
-.container .row .card-blog .card-content {
-  border: 1px solid lightgray;
-  padding: 5px;
-  border-radius: 5px;
-  height: 460px;
+.container .row .blog-container .card {
+  padding: 10px;
 }
 
-.container .row .card-blog .card-content img {
+.container .row .blog-container .card img {
   width: 100%;
 }
 
@@ -10984,6 +10985,11 @@ h1 {
   text-decoration: none;
   color: #3b3b3b;
   font-weight: bold;
+}
+
+.nav-container .container .row .nav-content .list-nav a i {
+  font-size: 25px;
+  vertical-align: middle;
 }
 
 * {

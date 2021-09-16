@@ -1,16 +1,16 @@
 .container{
     .row{
-      .card-blog{
-          padding: 10px;
-          .card-content{
-              border: 1px solid lightgray;
-              padding: 5px;
-              border-radius: 5px;
-              height: 460px;
+        justify-content: center;
+        .blog-container{
+            padding: 10px;
+            .card{
+                padding: 10px;
               img{
                   width: 100%;
               }
-          }
-      }
+            }
+        }
     }
 }
+
+

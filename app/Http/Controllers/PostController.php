@@ -49,6 +49,7 @@ class PostController extends Controller
         */
 
         //validazione url
+        //tutto ciò che non è validato va in errore
         $request->validate([
             'image' => 'url'
         ]);
