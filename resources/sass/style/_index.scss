@@ -1,0 +1,15 @@
+.container{
+    .row{
+      .card-blog{
+          padding: 10px;
+          height: 500px;
+          .card-content{
+              border: 1px solid lightgray;
+              height: 100%;
+              img{
+                  width: 100%;
+              }
+          }
+      }
+    }
+}

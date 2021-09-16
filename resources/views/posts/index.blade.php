@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.nav')
 <div class="container">
     <div class="row">
-        <h1 class="col-12">BOOLPRESS BLOG</h1>
         @foreach($posts as $post)
             <div class="card-blog col-3">
                 <div class="card-content">

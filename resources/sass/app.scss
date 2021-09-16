@@ -8,26 +8,12 @@
 @import '~bootstrap/scss/bootstrap';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
+//My Style
+@import './style/index';
+@import './style/nav';
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-.container{
-    .row{
-        h1{
-            text-align: center;
-        }
-      .card-blog{
-          padding: 10px;
-          height: 500px;
-          .card-content{
-              border: 1px solid lightgray;
-              height: 100%;
-              img{
-                  width: 100%;
-              }
-          }
-      }
-    }
 }

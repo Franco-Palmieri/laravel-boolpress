@@ -2,6 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
+@include('layouts.nav')
     <table class="table">
             <thead>
                 <tr>
