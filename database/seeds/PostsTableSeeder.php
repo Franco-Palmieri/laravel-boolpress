@@ -19,7 +19,6 @@ class PostsTableSeeder extends Seeder
             $postObject->name = $faker->word();
             $postObject->body = $faker->paragraph();
             $postObject->image = $faker->imageUrl(640, 480, 'post', true);
-            $postObject->date = $faker->date();
             $postObject->save();
         }
     }

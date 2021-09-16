@@ -18,7 +18,6 @@ class Posts extends Migration
             $table->string('name', 255);
             $table->text('body');
             $table->text('image');
-            $table->datetime('date');
             $table->timestamps();
         });
     }

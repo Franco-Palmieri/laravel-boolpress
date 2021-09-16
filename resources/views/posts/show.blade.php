@@ -8,7 +8,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Body</th>
-                    <th scope="col">Date</th>
                     <th scope="col">Image</th>
                 </tr>
             </thead>
@@ -17,7 +16,6 @@
                     <th scope="row">{{$post->id}}</th>
                     <td>{{$post->name}}</td>
                     <td>{{$post->body}}</td>
-                    <td>{{$post->date}}</td>
                     <td><img src="{{$post->image}}" alt=""></td>
                 </tr>
             </tbody>
