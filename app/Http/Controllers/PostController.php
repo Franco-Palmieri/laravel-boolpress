@@ -47,15 +47,23 @@ class PostController extends Controller
             creo un nuovo oggetto dal model Post
             imposto i parametri con i dati della request
         */
+
+        //validazione url
+        $request->validate([
+            'image' => 'url'
+        ]);
         $data = $request->all(); //ritornano tutti i parametri come un array
 
-        $data = new Post();
+        $post = new Post();
         $post->name = $data['name'];
         $post->body = $data['body'];
         $post->image = $data['image'];
         $post->save();
 
+        //ritorna al post appena creato
+        //l'id viene generato dopo il save
         return redirect()->route('posts.show', $post->id);
+
     }
 
     /**
