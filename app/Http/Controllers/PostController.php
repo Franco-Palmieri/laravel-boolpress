@@ -102,9 +102,13 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        $data = $request->all();
+        
+        $post->update($data); // nel model per evitare problemi devo spalmare i campi che possono essere modificati
+
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**
