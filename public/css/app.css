@@ -10942,10 +10942,6 @@ a.text-dark:focus {
   }
 }
 
-.container .row {
-  justify-content: center;
-}
-
 .container .row .blog-container {
   padding: 10px;
 }
