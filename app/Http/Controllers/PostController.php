@@ -56,10 +56,8 @@ class PostController extends Controller
         $data = $request->all(); //ritornano tutti i parametri come un array
 
         $post = new Post();
-        $post->name = $data['name'];
-        $post->body = $data['body'];
-        $post->image = $data['image'];
-        $post->save();
+        
+        $this->savePost($post, $data);
 
         //ritorna al post appena creato
         //l'id viene generato dopo il save
@@ -106,7 +104,11 @@ class PostController extends Controller
     {
         $data = $request->all();
         
-        $post->update($data); // nel model per evitare problemi devo spalmare i campi che possono essere modificati
+        //$post->update($data); 
+        // nel model per evitare problemi devo spalmare i campi che possono essere modificati
+        //oppure creo un metodo da riutilizzare
+
+        $this->savePost($post, $data);
 
         return redirect()->route('posts.show', $post->id);
     }
@@ -117,8 +119,19 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return redirect()->route('posts.index');
+    }
+
+    //MY FUNCTIONS
+    private function savePost($post, $data)
+    {
+        $post->name = $data['name'];
+        $post->body = $data['body'];
+        $post->image = $data['image'];
+        $post->save();
     }
 }

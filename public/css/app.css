@@ -10950,6 +10950,16 @@ a.text-dark:focus {
   padding: 10px;
 }
 
+.container .row .blog-container .card .options {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 5px 0;
+}
+
+.container .row .blog-container .card .options a:first-child {
+  margin-right: 5px;
+}
+
 .container .row .blog-container .card img {
   width: 100%;
 }

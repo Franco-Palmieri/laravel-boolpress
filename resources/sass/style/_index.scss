@@ -5,6 +5,16 @@
             padding: 10px;
             .card{
                 padding: 10px;
+                .options{
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 0 0 5px 0;
+                    a{
+                       &:first-child{
+                           margin-right: 5px;
+                       }
+                    }
+                }
               img{
                   width: 100%;
               }
