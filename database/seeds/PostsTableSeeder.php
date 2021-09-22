@@ -13,6 +13,22 @@ class PostsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        $categoryList = [
+            'personale',
+            'attualità',
+            'tematico',
+            'politico',
+            'directory'
+        ];
+        $listOfCategoryID = [];
+
+        foreach($categoryList as $category) {
+            $categoryObject = new Category();
+            $categoryObject->name = $category;
+            $categoryObject->save();
+            $listOfCategoryID[] = $categoryObject->id; //pusho id dei categoryObject
+        }
+
         for ($i = 0; $i < 50; $i++){
             
             //creo il post
@@ -21,6 +37,10 @@ class PostsTableSeeder extends Seeder
             $postObject->name = $faker->word();
             $postObject->body = $faker->paragraph();
             $postObject->image = $faker->imageUrl(640, 480, 'post', true);
+
+            $randCategoryKey = array_rand($listOfCategoryID, 1);
+            $categoryID = $listOfCategoryID[$randCategoryKey];
+            $post->category_id = $categoryID;
             $postObject->save();
         }
     }
