@@ -15,6 +15,8 @@ class PostsTableSeeder extends Seeder
     {
         for ($i = 0; $i < 50; $i++){
             
+            //creo il post
+            
             $postObject = new Post();
             $postObject->name = $faker->word();
             $postObject->body = $faker->paragraph();
