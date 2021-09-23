@@ -11,6 +11,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Body</th>
+                    <th scope="col">Category</th>
                     <th scope="col">Image</th>
                 </tr>
             </thead>
@@ -19,6 +20,7 @@
                     <th scope="row">{{$post->id}}</th>
                     <td>{{$post->name}}</td>
                     <td>{{$post->body}}</td>
+                    <td>{{$post->category->name}}</td>
                     <td><img src="{{$post->image}}" alt=""></td>
                 </tr>
             </tbody>
