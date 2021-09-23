@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Post;
+use App\Category;
 use Faker\Generator as Faker;
 
 class PostsTableSeeder extends Seeder
@@ -38,9 +39,11 @@ class PostsTableSeeder extends Seeder
             $postObject->body = $faker->paragraph();
             $postObject->image = $faker->imageUrl(640, 480, 'post', true);
 
+            //popolo tabella Categories
             $randCategoryKey = array_rand($listOfCategoryID, 1);
             $categoryID = $listOfCategoryID[$randCategoryKey];
-            $post->category_id = $categoryID;
+            $postObject->category_id = $categoryID;
+
             $postObject->save();
         }
     }

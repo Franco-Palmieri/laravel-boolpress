@@ -16,7 +16,6 @@ class UpdatePostsTable extends Migration
         Schema::table('posts', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories'); //collego la fk category_id che sarebbe l'id che si trova nella tabella categories.
-            $table->dropColumn('genere');
         });
     }
 
@@ -28,7 +27,6 @@ class UpdatePostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('genere', 50);
             $table->dropForeign('books_category_id_foreign');
             $table->dropColumn('category_id');
         });
